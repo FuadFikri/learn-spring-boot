@@ -1,0 +1,1 @@
+INSERT INTO book_store.`author` (`id`, `email`, `name`) VALUES (1,'joko@mail.com','Joko Laksono'),(2,'budi@mail.com','Budi Santoso'),(3,'Alex@mail.com','Alex Mulyono');
