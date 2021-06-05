@@ -24,11 +24,20 @@ public class BookSpecification implements Specification<Book> {
         //create a new predicate list
         List<Predicate> predicates = new ArrayList<>();
 
+
         if (request.getTitle() != null) {
             predicates.add(
                     criteriaBuilder.like(
                             criteriaBuilder.lower(root.get("title")),
                             "%" + request.getTitle().toLowerCase() + "%")
+            );
+        }
+
+        if (request.getCategory() != null) {
+            predicates.add(
+                    criteriaBuilder.like(
+                            criteriaBuilder.lower(root.get("category")),
+                            "%" + request.getCategory().toLowerCase() + "%")
             );
         }
 

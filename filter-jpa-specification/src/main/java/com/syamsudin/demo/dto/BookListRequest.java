@@ -7,14 +7,13 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class BookListRequest implements Serializable {
 
-    private Integer page = 0;
+    private Integer page = 1;
     private Integer size = 10;
     private String title;
     private String author;
+    private String category;
     private SortDirection sortDirection = SortDirection.DESC;
     private String sortBy = "title";
 

@@ -9,11 +9,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
-@Builder
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(exclude = "books")
 public class Author implements Serializable {
 
     @Id

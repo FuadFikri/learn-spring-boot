@@ -1,6 +1,5 @@
 package com.syamsudin.demo.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,11 +9,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Data
 @Entity
-@Builder
 public class Book implements Serializable {
 
 
