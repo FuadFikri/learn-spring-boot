@@ -1,0 +1,3 @@
+create table garage (id varchar(255) not null, location_code varchar(255), name varchar(255), primary key (id)) engine=InnoDB;
+create table vehicle (vehicle_type varchar(31) not null, id varchar(255) not null, length double precision, manufacturer varchar(255), width double precision, passenger_capacity integer, model varchar(255), load_capacity double precision, garage_id varchar(255), primary key (id)) engine=InnoDB;
+alter table vehicle add constraint FKjgxw38qst1vew2c21llke5d41 foreign key (garage_id) references garage (id);
