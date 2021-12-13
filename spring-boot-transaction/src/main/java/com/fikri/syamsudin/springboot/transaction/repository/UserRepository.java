@@ -1,13 +1,13 @@
 package com.fikri.syamsudin.springboot.transaction.repository;
 
-import com.fikri.syamsudin.springboot.transaction.entity.Rekening;
+import com.fikri.syamsudin.springboot.transaction.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface RekeningRepository extends CrudRepository<Rekening, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 
-    Optional<Rekening> findByNoRekening(String noRek);
+    Optional<User> findByUsername(String username);
 }

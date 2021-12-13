@@ -1,5 +1,6 @@
 package com.fikri.syamsudin.springboot.transaction.entity;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -9,13 +10,14 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Rekening {
+@Builder
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String noRekening;
-    private String nama;
-    private Double saldo;
+
+    private String username;
+    private Integer balance;
 }
