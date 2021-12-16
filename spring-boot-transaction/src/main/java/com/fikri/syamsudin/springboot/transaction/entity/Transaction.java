@@ -1,14 +1,20 @@
 package com.fikri.syamsudin.springboot.transaction.entity;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Getter
+@Builder
 public class Transaction {
 
     @Id

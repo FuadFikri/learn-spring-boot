@@ -28,8 +28,8 @@ public class TransactionService {
 
 
     @Transactional(propagation = Propagation.REQUIRED)
-    public void transfer(String usernameSource, String usernameDestination, Integer amount){
-//        logActivityService.log("TRANSFER", "Start transfer from user " + user1.getUsername() + " to user " + user2.getUsername());
+    public void transfer(String usernameSource, String usernameDestination, Integer amount) throws PaymentOverBalanceException {
+        logActivityService.log("TRANSFER", "Start transfer from user " + usernameSource + " to user " + usernameDestination);
 
         User user1 =  userRepository.findByUsername(usernameSource)
                 .orElseThrow(() -> new UserNotFoundException("source not found"));
