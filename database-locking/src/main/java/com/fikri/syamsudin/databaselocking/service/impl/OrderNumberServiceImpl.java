@@ -5,6 +5,7 @@ import com.fikri.syamsudin.databaselocking.repository.OrderNumberRepository;
 import com.fikri.syamsudin.databaselocking.service.OrderNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -16,6 +17,7 @@ public class OrderNumberServiceImpl implements OrderNumberService {
 
 
     @Override
+    @Transactional
     public Long getNumber(String prefix) {
         Optional<OrderNumber> orderNumberOpt = orderNumberRepository.findByPrefix(prefix);
 
