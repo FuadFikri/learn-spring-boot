@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -22,4 +23,5 @@ public class BookResponse implements Serializable {
     private String category;
 
     private String authorName;
+    private List<String> tags;
 }

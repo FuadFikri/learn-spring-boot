@@ -50,6 +50,15 @@ public class BookSpecification implements Specification<Book> {
             );
         }
 
+        if (request.getTags() != null ){
+            if (!request.getTags().isEmpty()){
+                List<Predicate> p = new ArrayList<>();
+                request.getTags().forEach(tag -> p.add(criteriaBuilder.isMember(tag, root.get("tags"))));
+                Predicate predicateTags = criteriaBuilder.or(p.toArray(new Predicate[0]));
+                predicates.add(predicateTags);
+
+            }
+        }
         return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
     }
 }

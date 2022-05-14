@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
+import java.util.List;
 
 
 @Data
@@ -30,4 +30,8 @@ public class Book implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
     private Author author;
+
+
+    @ElementCollection
+    private List<String> tags;
 }
